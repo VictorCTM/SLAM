@@ -1,47 +1,42 @@
 var rep = new Array;
-var faite = new Array;
+var questionF = new Array;
 var score = 0;
  
 
-rep[1] = "a";
-rep[2] = "a";
-rep[3] = "a";
-rep[4] = "a";
-rep[5] = "a";
-rep[6] = "a";
-rep[7] = "a";
-rep[8] = "a";
-rep[9] = "a";
-rep[10] = "a";
+rep[1] = "a";rep[2] = "b";rep[3] = "a";rep[4] = "a";rep[5] = "c";rep[6] = "b";rep[7] = "c";rep[8] = "b";rep[9] = "b";rep[10] = "c";
  
 
 function testRep(question, reponse){
 
         if(reponse != rep[question]){
 
-                if(!faite[question]){
-                        faite[question] = -1;
+                if(!questionF[question]){
+                        questionF[question] = -1;
                 }
 
                 else{
-                        alert("Tu as déjà répondu à cette question !");
+                        alert("Déjà faite...");
                 }      
         }
 
         else{
 
-                if(!faite[question]){
-                        faite[question] = -1;
+                if(!questionF[question]){
+                        questionF[question] = -1;
                         score++;
-                        alert("Bonne réponse !! ");
                 }
 
                 else{ 
-                        alert("Tu as déjà répondu à cette question !");
+                        alert("Déjà faite...");
                 }
         }
 }
 
-function score(){
-        alert(score + "/10");
+
+
+function ResQuiz() {
+
+        alert("Vous avez un score de " +score+ "/10");
+        faite = new Array;
+        score = 0;
 }
